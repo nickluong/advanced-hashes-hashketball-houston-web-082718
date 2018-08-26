@@ -47,9 +47,21 @@ def game_hash
 	}
 end
 
-def num_points_scored(player)
-  
-  
+def num_points_scored(name)
+	game_hash.each do |location, team_info|		
+		if team_info[:players].keys.include? name
+			return team_info[:players][name][:points]
+		end
+	end
+end
+
+def shoe_size(name)
+	game_hash.each do |location, team_info|		
+		if team_info[:players].keys.include? name
+			return team_info[:players][name][:shoe]
+		end
+	end
+end
 
 
 
