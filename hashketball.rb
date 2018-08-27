@@ -91,17 +91,6 @@ def player_numbers(team)
 	result
 end
 
-def big_shoe_rebounds
-	bigfoot = ""
-	bigshoe = 0
-	game_hash.each do |location, team_info|
-		team_info[:players].each do |name, stat|
-			if stat[:shoe] > bigshoe
-				bigshoe = stat[:shoe]
-				bigfoot = name
-			end
-		end
-	end
 	
 	def player_stats(name)
 	game_hash.each do |location, team_info|		
@@ -109,14 +98,6 @@ def big_shoe_rebounds
 			return team_info[:players][name]
 		end
 	end
-end
-
-	game_hash.each do |location, team_info|		
-		if team_info[:players].keys.include? bigfoot
-			return team_info[:players][bigfoot][:rebounds]
-		end
-	end
-
 end
 
 
