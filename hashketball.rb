@@ -102,6 +102,14 @@ def big_shoe_rebounds
 			end
 		end
 	end
+	
+	def player_stats(name)
+	game_hash.each do |location, team_info|		
+		if team_info[:players].keys.include? name
+			return team_info[:players][name]
+		end
+	end
+end
 
 	game_hash.each do |location, team_info|		
 		if team_info[:players].keys.include? bigfoot
