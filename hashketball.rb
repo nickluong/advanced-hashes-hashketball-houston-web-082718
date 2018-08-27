@@ -80,12 +80,18 @@ def team_names
 end 
 
 def player_numbers(team)
-  result = []
-  game_hash.each do|location, team_info|
-   if team_info[:team_name] == team 
-     team_info[team].each do |players|
-     
+	result = []
+	game_hash.each do |location, team_info|
+		if team_info[:team_name] == team
+			team_info[:players].each do |name, stats|
+				result << stats[:number]
+			end
+		end
+	end
+	result
+end
 
+def big_shoe_rebounds
 
 
 
