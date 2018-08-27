@@ -66,7 +66,7 @@ end
 def team_colors(team)
   result = []
   game_hash.each do|location, team_info|
-      result << location
+      result << location[0]
   end 
   result
 end 
