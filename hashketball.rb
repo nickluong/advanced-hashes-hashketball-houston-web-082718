@@ -84,16 +84,7 @@ def player_numbers(team)
   game_hash.each do|location, team_info|
    if team_info[:team_name] == team 
      team_info[team].each do |players|
-        players.each do|info|
-          if(info == :number)
-            result << info
-          end
-        end
-      end
-    end
-  end
-end
-      
+     
 
 
 
