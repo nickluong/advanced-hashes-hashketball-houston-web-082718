@@ -66,7 +66,7 @@ end
 def team_names(team)
   result = []
   game_hash.each do|location, team_info|
-      result << location
+      result << team_info[:team_name]
   end 
   result
 end 
